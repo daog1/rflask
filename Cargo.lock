@@ -262,20 +262,19 @@ dependencies = [
 
 [[package]]
 name = "awf-codegen"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+version = "0.1.1"
 dependencies = [
+ "proc-macro2 1.0.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "quote 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "syn 1.0.5 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "awf-help"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+version = "0.1.1"
 dependencies = [
  "actix-web 1.0.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "awf-codegen 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "awf-codegen 0.1.1",
  "inventory 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -1098,8 +1097,9 @@ name = "rflask"
 version = "0.1.0"
 dependencies = [
  "actix-web 1.0.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "awf-help 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "awf-help 0.1.1",
  "inventory 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.100 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -1585,8 +1585,6 @@ dependencies = [
 "checksum arc-swap 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)" = "854ede29f7a0ce90519fb2439d030320c6201119b87dab0ee96044603e1130b9"
 "checksum autocfg 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)" = "b671c8fb71b457dd4ae18c4ba1e59aa81793daacc361d82fcd410cef0d491875"
 "checksum awc 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)" = "78c9c1e32d6084343b3857eacb1f43aaefb93a816e15aae4685bc3c0a9052964"
-"checksum awf-codegen 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "6855733290b04d86272e54bb2c2d46cd62f81041c259cede7540eeebfa4c00a4"
-"checksum awf-help 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "b69a31a68cb9d23bb5318ef9191f19cbf5dd686b222101b1ec3abfc7cabd9bf0"
 "checksum backtrace 0.3.37 (registry+https://github.com/rust-lang/crates.io-index)" = "5180c5a20655b14a819b652fd2378fa5f1697b6c9ddad3e695c2f9cedf6df4e2"
 "checksum backtrace-sys 0.1.31 (registry+https://github.com/rust-lang/crates.io-index)" = "82a830b4ef2d1124a711c71d263c5abdc710ef8e907bd508c88be475cebc422b"
 "checksum base64 0.10.1 (registry+https://github.com/rust-lang/crates.io-index)" = "0b25d992356d2eb0ed82172f5248873db5560c4721f564b13cb5193bda5e668e"
