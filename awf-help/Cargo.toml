@@ -1,0 +1,16 @@
+[package]
+name = "awf-help"
+version = "0.1.1"
+authors = ["gotham <lixiao187@gmail.com>"]
+edition = "2018"
+license = "MIT"
+description = "Actix web flask use proc macros"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+inventory = "0.1"
+actix-web = "1.0"
+#awf-codegen = "0.1.0"
+#{path ="../awf-codegen"}
+awf-codegen = {path ="../awf-codegen"}
