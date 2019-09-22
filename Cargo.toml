@@ -12,4 +12,6 @@ awf-help = {path ="./awf-help"}
 actix-web = "1.0"
 inventory = "0.1"
 serde ="1.0"
+derive_more ={version="0.15", required-features=["deref","deref_mut"]}
+derive-new="0.5"
 

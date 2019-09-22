@@ -1,10 +1,12 @@
 [package]
 name = "awf-codegen"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["gotham <lixiao187@gmail.com>"]
 edition = "2018"
 license = "MIT"
 description = "Actix web flask proc macros"
+repository = "https://github.com/gothame/rflask"
+homepage = "https://github.com/gothame/rflask"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]

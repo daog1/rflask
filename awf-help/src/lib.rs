@@ -11,7 +11,7 @@
 //! import namespace
 //! ```
 //! extern crate awf_help;
-//! use awf_help::{config, route, ServiceFactory};
+//! use awf_help::{config, route,route_res, ServiceFactory};
 //! ```
 //! config webservice
 //! ```
@@ -31,8 +31,25 @@
 //!  #[route(POST, "/")]
 //!  #[route(HEAD, "/")]
 //!  ```
+//! 
+//!  ```
+//! #[route_res("/hello")]
+//! impl Hello {
+//!     fn get(req: HttpRequest) -> String {
+//!         format!("get Hello !")
+//!     }
+//!     fn post(req: HttpRequest) -> String {
+//!         format!("post Hello !")
+//!     }
+//! }
+//!  ```
 //!
 use actix_web::web;
+use std::collections::HashMap;
+use std::any::Any;
+use std::sync::{Arc, Mutex};
+#[macro_use]
+extern crate lazy_static;
 pub trait ServiceFactory {
     fn register(&self, config: &mut web::ServiceConfig);
 }

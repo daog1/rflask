@@ -65,7 +65,21 @@ pub fn route(attr: TokenStream, item: TokenStream) -> TokenStream {
         };
     func.into()
 }
-
+/// Creates route handler with `PATH` impl Resource.
+///
+/// Syntax: `#[route_res("/")]`
+///
+/// ```
+/// #[route_res("/Hello")]
+/// impl Hello {
+///     fn get(that:Option<Hello>, req: HttpRequest) -> String {
+///         format!("get Hello !")
+///     }
+///     fn post(that:Option<Hello>, req: HttpRequest) -> String {
+///         format!("post Hello !")
+///     }
+/// }
+/// ```
 #[proc_macro_attribute]
 pub fn route_res(attr: TokenStream, item: TokenStream) -> TokenStream {
     //item
@@ -90,9 +104,9 @@ pub fn route_res(attr: TokenStream, item: TokenStream) -> TokenStream {
     }
     let self_ty = &itimpl.self_ty;
     let mut nameident = quote! {#self_ty};
-    println!("ident {:?}", nameident.to_string());
+    //println!("ident {:?}", nameident.to_string());
     let classname = syn::Ident::new(&format!("{}{}", "class_", nameident), Span::call_site());
-    println!("classname ident {:?}", classname.to_string());
+    //println!("classname ident {:?}", classname.to_string());
     let callprefix = format_ident!("web");
     let method = format_ident!("get");
     let mut methods = vec![];
@@ -112,7 +126,7 @@ pub fn route_res(attr: TokenStream, item: TokenStream) -> TokenStream {
             _ => {}
         }
     }
-    println!("impl:{:?}", methods);
+    //println!("impl:{:?}", methods);
     let mut methodscode = vec![];
     for method in methods{
         let methodident = format_ident!("{}",method.to_string());
@@ -139,10 +153,10 @@ pub fn route_res(attr: TokenStream, item: TokenStream) -> TokenStream {
         impl ServiceFactory for #classname {
             fn register(&self, config: &mut web::ServiceConfig) {
                 #(#methodscode)*
-                
+                //mapRes.insert(stringify!(#nameident),Arc::new(#nameident::new(stringify!(#nameident).to_string())));
             }
         }
     };
-    println!("gen:{}", func.to_string());
+    //println!("gen:{}", func.to_string());
     func.into()
 }
