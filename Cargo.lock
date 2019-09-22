@@ -262,7 +262,8 @@ dependencies = [
 
 [[package]]
 name = "awf-codegen"
-version = "0.1.1"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "proc-macro2 1.0.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "quote 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -271,10 +272,10 @@ dependencies = [
 
 [[package]]
 name = "awf-help"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "actix-web 1.0.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "awf-codegen 0.1.1",
+ "awf-codegen 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "inventory 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -1107,7 +1108,7 @@ name = "rflask"
 version = "0.1.0"
 dependencies = [
  "actix-web 1.0.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "awf-help 0.1.1",
+ "awf-help 0.1.2",
  "derive-new 0.5.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "derive_more 0.15.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "inventory 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1597,6 +1598,7 @@ dependencies = [
 "checksum arc-swap 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)" = "854ede29f7a0ce90519fb2439d030320c6201119b87dab0ee96044603e1130b9"
 "checksum autocfg 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)" = "b671c8fb71b457dd4ae18c4ba1e59aa81793daacc361d82fcd410cef0d491875"
 "checksum awc 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)" = "78c9c1e32d6084343b3857eacb1f43aaefb93a816e15aae4685bc3c0a9052964"
+"checksum awf-codegen 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "7c3a6e2ba3729227b6658212f377098b7ba727ed1711b25fc0173c3c162db2d4"
 "checksum backtrace 0.3.37 (registry+https://github.com/rust-lang/crates.io-index)" = "5180c5a20655b14a819b652fd2378fa5f1697b6c9ddad3e695c2f9cedf6df4e2"
 "checksum backtrace-sys 0.1.31 (registry+https://github.com/rust-lang/crates.io-index)" = "82a830b4ef2d1124a711c71d263c5abdc710ef8e907bd508c88be475cebc422b"
 "checksum base64 0.10.1 (registry+https://github.com/rust-lang/crates.io-index)" = "0b25d992356d2eb0ed82172f5248873db5560c4721f564b13cb5193bda5e668e"
